@@ -1,12 +1,107 @@
-# React + Vite
+# 📖 Bookit KE - Booking Platform Boilerplate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Bookit KE** is a modern booking platform template for local service providers in Kenya and beyond. Built with a full-stack developer in mind, it leverages Vite, React, TailwindCSS, ShadCN UI on the frontend, and ExpressJS, Drizzle ORM, and MySQL on the backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
+- Vite + React
+- Tailwind CSS
+- ShadCN UI (Radix UI based component library)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+- Node.js + Express.js
+- Drizzle ORM (type-safe queries)
+- MySQL (PlanetScale/Supabase/Local)
+
+---
+
+## 📁 Project Structure
+
+```
+bookit-ke/
+├── client/               # Vite + React app (frontend)
+│   ├── components/       # UI Components
+│   ├── pages/            # Routes / Views
+│   ├── hooks/            # Custom React hooks
+│   └── services/         # Axios API utilities
+│
+└── server/               # Express.js server (backend)
+    ├── controllers/      # Business logic
+    ├── routes/           # API endpoints
+    ├── db/               # Drizzle ORM schema + config
+    └── utils/            # Helpers (e.g., JWT, validators)
+```
+
+---
+
+## ⚙️ Features
+- 🔐 JWT Authentication for service providers
+- 📅 Booking creation, management & status updates
+- 💬 WhatsApp notifications integration ready (UltraMsg/Twilio)
+- 📦 Simple and scalable codebase
+- 🎨 Customizable UI with Tailwind + ShadCN
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js >= 18
+- MySQL DB (Local, PlanetScale, or Supabase)
+
+### 1. Clone the Repo
+```bash
+git clone https://github.com/your-username/bookit-ke.git
+cd bookit-ke
+```
+
+### 2. Setup the Backend
+```bash
+cd server
+cp .env.example .env   # Fill in your DATABASE_URL
+npm install
+npm run dev
+```
+
+### 3. Setup the Frontend
+```bash
+cd ../client
+npm install
+npm run dev
+```
+
+---
+
+## 🧪 API Overview
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/auth/register` | POST | Register a new service provider |
+| `/api/auth/login`    | POST | Login and receive JWT |
+| `/api/bookings`      | POST | Create a new customer booking |
+| `/api/bookings/:userId` | GET | Get bookings by provider |
+| `/api/bookings/update/:bookingId` | PATCH | Update booking status |
+
+---
+
+## 📌 Upcoming Improvements
+- ✅ Admin dashboard
+- ✅ Mpesa integration (Daraja API)
+- ✅ Booking calendar
+- ✅ Image uploads via Cloudinary
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome. For major changes, open an issue first to discuss what you’d like to change.
+
+---
+
+## 📃 License
+[MIT](LICENSE)
+
+---
+
+> Built with love and late nights by [You], for the hustlers, the fixers, the pros of 🇰🇪.
