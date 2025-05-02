@@ -71,7 +71,20 @@ npm run dev
 cd ../client
 npm install
 npm run dev
+# Open http://localhost:5173 to view the app
 ```
+
+## 🏠 Frontend Implementation
+
+- Project entry: `index.html` → `src/main.jsx` → `src/Home.jsx`
+- UI components live under `src/components/ui`; import them using the `@` alias (e.g., `@/components/ui/button`).
+- To add ShadCN UI components, run:
+```bash
+npx shadcn-ui@latest add <component>
+```
+- Tailwind CSS configuration: `tailwind.config.js` and styles in `src/index.css`.
+- Customize the landing page by editing `src/Home.jsx` (headline, buttons, features grid, etc.).
+- Run development server with `npm run dev` and watch for changes automatically.
 
 ---
 
@@ -95,7 +108,7 @@ npm run dev
 ---
 
 ## 🤝 Contributing
-Pull requests are welcome. For major changes, open an issue first to discuss what you’d like to change.
+Pull requests are welcome. For major changes, open an issue first to discuss what you'd like to change.
 
 ---
 
