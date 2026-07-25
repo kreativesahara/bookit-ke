@@ -1,107 +1,17 @@
-# 📖 Bookit KE - Booking Platform Boilerplate
+# Bookit KE
 
-**Bookit KE** is a modern booking platform template for local service providers in Kenya and beyond. Built with a full-stack developer in mind, it leverages Vite, React, TailwindCSS, ShadCN UI on the frontend, and ExpressJS, Drizzle ORM, and MySQL on the backend.
+A Flutter port of the Bookit KE landing page — a modern booking platform for local service providers in Kenya.
 
----
+## Run it
 
-## 🛠️ Tech Stack
+This project requires the [Flutter SDK](https://docs.flutter.dev/get-started/install) (Dart 3.3+).
 
-### Frontend
-- Vite + React
-- Tailwind CSS
-- ShadCN UI (Radix UI based component library)
-
-### Backend
-- Node.js + Express.js
-- Drizzle ORM (type-safe queries)
-- MySQL (PlanetScale/Supabase/Local)
-
----
-
-## 📁 Project Structure
-
-```
-bookit-ke/
-├── client/               # Vite + React app (frontend)
-│   ├── components/       # UI Components
-│   ├── pages/            # Routes / Views
-│   ├── hooks/            # Custom React hooks
-│   └── services/         # Axios API utilities
-│
-└── server/               # Express.js server (backend)
-    ├── controllers/      # Business logic
-    ├── routes/           # API endpoints
-    ├── db/               # Drizzle ORM schema + config
-    └── utils/            # Helpers (e.g., JWT, validators)
-```
-
----
-
-## ⚙️ Features
-- 🔐 JWT Authentication for service providers
-- 📅 Booking creation, management & status updates
-- 💬 WhatsApp notifications integration ready (UltraMsg/Twilio)
-- 📦 Simple and scalable codebase
-- 🎨 Customizable UI with Tailwind + ShadCN
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js >= 18
-- MySQL DB (Local, PlanetScale, or Supabase)
-
-### 1. Clone the Repo
 ```bash
-git clone https://github.com/your-username/bookit-ke.git
-cd bookit-ke
+flutter pub get
+flutter run
 ```
 
-### 2. Setup the Backend
-```bash
-cd server
-cp .env.example .env   # Fill in your DATABASE_URL
-npm install
-npm run dev
-```
+## Structure
 
-### 3. Setup the Frontend
-```bash
-cd ../client
-npm install
-npm run dev
-```
-
----
-
-## 🧪 API Overview
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/auth/register` | POST | Register a new service provider |
-| `/api/auth/login`    | POST | Login and receive JWT |
-| `/api/bookings`      | POST | Create a new customer booking |
-| `/api/bookings/:userId` | GET | Get bookings by provider |
-| `/api/bookings/update/:bookingId` | PATCH | Update booking status |
-
----
-
-## 📌 Upcoming Improvements
-- ✅ Admin dashboard
-- ✅ Mpesa integration (Daraja API)
-- ✅ Booking calendar
-- ✅ Image uploads via Cloudinary
-
----
-
-## 🤝 Contributing
-Pull requests are welcome. For major changes, open an issue first to discuss what you’d like to change.
-
----
-
-## 📃 License
-[MIT](LICENSE)
-
----
-
-> Built with love and late nights by [You], for the hustlers, the fixers, the pros of 🇰🇪.
+- `lib/main.dart` — app entry point and theme
+- `lib/home_page.dart` — landing page (hero + feature cards)

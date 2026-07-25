@@ -10,7 +10,7 @@ function Home() {
         <p className="text-xl text-muted-foreground mb-8">
           The modern booking platform for local service providers in Kenya
         </p>
-        
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Button size="lg" className="font-medium">
             Get Started
@@ -19,7 +19,7 @@ function Home() {
             Learn More
           </Button>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
           <div className="p-6 rounded-lg border bg-card shadow-sm">
             <h3 className="font-medium text-lg mb-2">Easy Booking</h3>
